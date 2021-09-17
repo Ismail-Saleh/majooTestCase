@@ -1,6 +1,6 @@
 part of '../screen/page.dart';
 
-Color accentColor = Color(0xFFFCCCBC);
+Color accentColor = Color(0xFF1A237E);
 
 final ButtonStyle flatButtonStyle = TextButton.styleFrom(
   primary: Colors.white,
@@ -27,6 +27,11 @@ final ButtonStyle borderButtonStylePrimary = TextButton.styleFrom(
     side: BorderSide(color: Color(0xFF5EE1F1), width: 1),
     borderRadius: BorderRadius.all(Radius.circular(10)),
   ),
+);
+
+var spinDancing = SpinKitThreeBounce(
+  color: accentColor,
+  size: 30.0,
 );
 
 class TextStyles extends StatelessWidget {

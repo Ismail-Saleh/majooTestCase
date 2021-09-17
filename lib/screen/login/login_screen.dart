@@ -25,14 +25,15 @@ class _LoginScreenState extends State<LoginScreen> {
             Container(
               margin: EdgeInsets.only(top: 30),
               child: TextButton(
-                  onPressed: () {
-                    
-                  },
-                  style: flatButtonStyle,
-                  child: TextStyles(
-                    value: "Login With Google",
-                  )),
-            )
+                onPressed: () {
+                  Provider.of<AppModel>(context, listen: false).getLogin();
+                },
+                style: flatButtonStyle,
+                child: TextStyles(
+                  value: "Login With Google",
+                ),
+              ),
+            ),
           ],
         ),
       ),
