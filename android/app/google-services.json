@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "831887962201",
+    "project_id": "signin-test-cd755",
+    "storage_bucket": "signin-test-cd755.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:831887962201:android:4b543845dfc8a688d8c148",
+        "android_client_info": {
+          "package_name": "com.example.starwarsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "831887962201-bn2dfi0n5k36idnab53sg2laslhvt0d5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.starwarsapp",
+            "certificate_hash": "f8ce1199b4c22343264d9714560cbfd7eb493e16"
+          }
+        },
+        {
+          "client_id": "831887962201-clpdrf2qf7tjanqb1cq6rpdvulmd6iko.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOp2HtHv0_Ic4bk6vFuo5Vm1QdGyRXErM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "831887962201-clpdrf2qf7tjanqb1cq6rpdvulmd6iko.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
