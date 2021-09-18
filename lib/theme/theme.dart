@@ -9,7 +9,7 @@ final ButtonStyle flatButtonStyle = TextButton.styleFrom(
   shape: const RoundedRectangleBorder(
     borderRadius: BorderRadius.all(Radius.circular(10)),
   ),
-  backgroundColor: Colors.black38,
+  backgroundColor: Colors.blue,
 );
 
 final ButtonStyle borderButtonStyle = TextButton.styleFrom(
@@ -20,6 +20,38 @@ final ButtonStyle borderButtonStyle = TextButton.styleFrom(
     borderRadius: BorderRadius.all(Radius.circular(10)),
   ),
 );
+
+class ImgStyle extends StatelessWidget {
+  const ImgStyle({
+    Key? key,
+    this.url,
+    this.radius,
+    this.height,
+    this.width,
+  }) : super(key: key);
+
+  final String? url;
+  final double? radius, width, height;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: width,
+      height: height,
+      child: ClipRRect(
+        borderRadius: BorderRadius.all(
+          Radius.circular(radius!),
+        ),
+        child: CachedNetworkImage(
+          imageUrl: url!,
+          fit: BoxFit.cover,
+          placeholder: (context, url) => CircularProgressIndicator(),
+          errorWidget: (context, url, error) => Icon(Icons.error),
+        ),
+      ),
+    );
+  }
+}
+
 final ButtonStyle borderButtonStylePrimary = TextButton.styleFrom(
   primary: Colors.black45,
   minimumSize: Size(88, 44),
@@ -49,9 +81,12 @@ class TextStyles extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      value!,
-      style: TextStyle(fontSize: size, fontWeight: weight),
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 3),
+      child: Text(
+        value!,
+        style: TextStyle(fontSize: size, fontWeight: weight, color: color),
+      ),
     );
   }
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_phoenix/flutter_phoenix.dart';
 import 'package:provider/provider.dart';
 import 'package:starwarsapp/model/model.dart';
+import 'package:starwarsapp/provider/home_provider.dart';
 import 'package:starwarsapp/screen/page.dart';
 import 'package:firebase_core/firebase_core.dart';
 
@@ -11,6 +12,7 @@ void main() async {
   runApp(MultiProvider(
     providers: [
       ChangeNotifierProvider(create: (context) => AppModel()),
+      ChangeNotifierProvider(create: (context) => HomeProvider()),
     ],
     child: Phoenix(
       child: MyApp(),
